@@ -5,22 +5,6 @@
   text-transform: capitalize;
 }
 
-.responsiveIcon {
-  border-style: none;
-}
-.navLinks {
-  justify-content: space-around;
-  display: flex;
-  width: 100%;
-  align-items: center;
-}
-.navIcons {
-  display: flex;
-
-  width: fit-content;
-  position: absolute;
-  right: 0;
-}
 .svgIcon {
   width: 20px;
   height: 25px;
@@ -37,8 +21,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.brandName {
-  font-size: 30px;
-  font-family: Guro;
-  text-transform: capitalize;
+.navbar-nav-s {
+  position: absolute;
+  right: 0;
+}
+.navbar-nav-f {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 992px) and (min-width: 400px) {
 }

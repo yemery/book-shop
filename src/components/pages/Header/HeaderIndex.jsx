@@ -1,13 +1,12 @@
 import React from "react";
 import "../Styles/header.css";
-import Container from "react-bootstrap/Container";
 
 const HeaderIndex = () => {
   return (
     <>
-      <Container fluid className="headerImgContainer">
+      <div className="conatiner-fluid headerContainer">
         <img src="Images/headerImg.jpg" alt="" className="headerImg" />
-      </Container>
+      </div>
     </>
   );
 };
