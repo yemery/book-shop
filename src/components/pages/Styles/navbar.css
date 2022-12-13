@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   text-transform: capitalize;
+  font-family: Gotu;
+  color: black;
 }
 
 .svgIcon {
@@ -31,6 +33,41 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+.toggleNav {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+button.navbar-toggler {
+  border: none;
+}
+nav {
+  height: 60px;
+}
+.navbar-nav a {
+  color: black;
+  font-size: 20px;
+}
+.navbar-nav a:hover {
+  cursor: pointer;
+  text-shadow: 1px 0px black;
+}
+.navbar-brand {
+  font-size: 35px;
+}
 @media screen and (max-width: 992px) and (min-width: 400px) {
+  .navLinkWord,
+  .navbar-nav-s,
+  .navbar-nav-f {
+    display: block;
+    position: unset;
+    transform: unset;
+  }
 }

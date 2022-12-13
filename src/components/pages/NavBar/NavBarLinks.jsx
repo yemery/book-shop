@@ -1,17 +1,28 @@
 import React from "react";
 import "../Styles/navbar.css";
+import { useState, useEffect } from "react";
 import { navBarWordLinks, navBarIconLinks } from "../../data/landingPage";
 
 const NavBarLinks = () => {
+  const [bool, setBool] = useState(true);
+  const [windowW, setWindowW] = useState(0);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      const newW = window.innerWidth;
+      setWindowW(newW);
+    });
+    // console.log(windowW);
+  }, [bool, windowW]);
+
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-white bg-white">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">
+      <nav className="navbar navbar-expand-lg navbar-white bg-white">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/">
             the old book store
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup"
@@ -19,27 +30,42 @@ const NavBarLinks = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="">
+              <img
+                className="toggleNav"
+                onClick={(e) => setBool(!bool)}
+                src={
+                  bool
+                    ? "Icons/three-horizontal-lines-outline-icon (1).svg"
+                    : "Icons/close-round-line-icon.svg"
+                }
+                alt=""
+              />
+            </span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav navbar-nav-f">
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav navbar-nav-f">
               {navBarWordLinks.map((e) => {
                 return (
                   <>
-                    <a class="nav-link" href={e.path}>
+                    <a className="nav-link" href={e.path} key={e.id}>
                       {e.name}
                     </a>
                   </>
                 );
               })}
             </div>
-            <div class="navbar-nav navbar-nav-s">
-              {navBarIconLinks.map((el) => {
+            <div className="navbar-nav navbar-nav-s">
+              {navBarIconLinks.map((e) => {
                 return (
                   <>
-                    <a class="nav-link" href={el.path}>
-                      <img className="svgIcon" src={el.src} alt={el.id} />
-                      <i>(0)</i>{" "}
+                    <a className="nav-link" href={e.path} key={e.id}>
+                      {windowW <= 992 && windowW <= 400 ? (
+                        e.name
+                      ) : (
+                        <img src={e.src} className="svgIcon" alt="" />
+                      )}
+                      {e.id !== 3 ? <i>(0)</i> : ""}
                     </a>
                   </>
                 );
