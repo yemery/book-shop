@@ -1,0 +1,11 @@
+.headerImgContainer {
+  width: 100%;
+  height: calc(100vh - 70.97px);
+  /* background-color: aquamarine; */
+  margin-left: 0;
+  margin-right: 0;
+}
+.headerImg {
+  width: 100%;
+  height: 100%;
+}
