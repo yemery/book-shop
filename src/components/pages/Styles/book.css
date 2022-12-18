@@ -1,0 +1,56 @@
+.bookImg {
+  width: 100px;
+  width: 100px;
+}
+.card {
+  width: 210px;
+  height: 383px;
+}
+
+.iconImg {
+  width: 20px;
+  height: 25px;
+}
+a {
+  text-decoration: none;
+}
+.card .bookImg {
+  height: 270px;
+  /* width: 100%; */
+  width: 100%;
+}
+.otherInfos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+  height: 50px;
+}
+.bookIcons button {
+  background-color: transparent;
+  border: none;
+  margin-left: 4px;
+}
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  border: none;
+}
+.modal-content img {
+  width: 240px;
+  height: 400px;
+}
+.modal-footer button {
+  background-color: black;
+  border: 1px solid black;
+}
+.linkToBook:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 992px) and (min-width: 400px) {
+  .container-fluid All {
+    display: unset;
+  }
+}

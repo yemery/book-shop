@@ -11,18 +11,39 @@ const navBarIconLinks = [
     path: "/shoppingcart",
     name: "shopping cart",
   },
+
   {
     id: 2,
     src: "Icons/heart-thin-icon.svg",
-    path: "/wishelist",
-    name: "wish list",
+    path: "/login",
+    name: "Login or sign Up",
   },
   {
     id: 3,
     src: "Icons/user-check-icon.svg",
-    path: "/login",
-    name: "Login or sign Up",
+    path: "",
+    name: "",
+  },
+];
+const bookIcons = [
+  {
+    id: 1,
+    src: "Icons/add-item-in-cart-icon.svg",
+    path: "",
+    name: "",
+  },
+  {
+    id: 2,
+    src: "Icons/heart-thin-icon.svg",
+    path: "",
+    name: "",
+  },
+  {
+    id: 2,
+    src: "Icons/eye-look-icon.svg",
+    path: "",
+    name: "",
   },
 ];
 
-export { navBarWordLinks, navBarIconLinks };
+export { navBarWordLinks, navBarIconLinks, bookIcons };

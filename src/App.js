@@ -1,11 +1,11 @@
 import "./App.css";
 
-import NavBarIndex from "./components/pages/NavBar/NavBarIndex";
+import AppRoutes from "./components/pages/NavBar/AppRoutes";
 
 function App() {
   return (
     <>
-      <NavBarIndex />
+      <AppRoutes />
     </>
   );
 }

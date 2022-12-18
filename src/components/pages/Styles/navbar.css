@@ -26,6 +26,8 @@
 .navbar-nav-s {
   position: absolute;
   right: 0;
+  top: 50%;
+  transform: translate(0%, -50%);
 }
 .navbar-nav-f {
   position: absolute;
@@ -59,8 +61,12 @@ nav {
   cursor: pointer;
   text-shadow: 1px 0px black;
 }
-.navbar-brand {
-  font-size: 35px;
+.navbar-brand img {
+  width: 210px;
+}
+#navbarNavAltMarkup {
+  transition: width;
+  transition-timing-function: ease-out;
 }
 @media screen and (max-width: 992px) and (min-width: 400px) {
   .navLinkWord,
@@ -69,5 +75,27 @@ nav {
     display: block;
     position: unset;
     transform: unset;
+  }
+  nav {
+    height: unset;
+  }
+  #navbarNavAltMarkup {
+    position: relative;
+    height: 100vh;
+  }
+  .navbar-nav-s,
+  .navbar-nav-f {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  .navbar-nav-s {
+    transform: translate(-50%, -19%);
+  }
+  .navbar-nav-f {
+    transform: translate(-50%, -112%);
+  }
+  .navbar-nav a {
+    text-align: center;
   }
 }

@@ -5,21 +5,21 @@ import { navBarWordLinks, navBarIconLinks } from "../../data/landingPage";
 
 const NavBarLinks = () => {
   const [bool, setBool] = useState(true);
-  const [windowW, setWindowW] = useState(0);
+  const [windowW, setWindowW] = useState(window.innerWidth);
   useEffect(() => {
     window.addEventListener("resize", () => {
       const newW = window.innerWidth;
       setWindowW(newW);
     });
     // console.log(windowW);
-  }, [bool, windowW]);
+  }, [windowW, bool]);
 
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-white bg-white">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            the old book store
+            <img src="Icons/theoldbookstore.svg" alt="" />
           </a>
           <button
             className="navbar-toggler"
@@ -60,7 +60,7 @@ const NavBarLinks = () => {
                 return (
                   <>
                     <a className="nav-link" href={e.path} key={e.id}>
-                      {windowW <= 992 && windowW <= 400 ? (
+                      {windowW <= 1000 ? (
                         e.name
                       ) : (
                         <img src={e.src} className="svgIcon" alt="" />
