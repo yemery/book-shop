@@ -14,6 +14,9 @@
 a {
   text-decoration: none;
 }
+.card .showBook:hover {
+  cursor: pointer;
+}
 .card .bookImg {
   height: 270px;
   /* width: 100%; */

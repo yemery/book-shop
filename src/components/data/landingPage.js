@@ -15,14 +15,20 @@ const navBarIconLinks = [
   {
     id: 2,
     src: "Icons/heart-thin-icon.svg",
-    path: "/login",
-    name: "Login or sign Up",
+    path: "/wishList",
+    name: "wish list",
   },
   {
     id: 3,
-    src: "Icons/user-check-icon.svg",
+    src: "Icons/eye-look-icon.svg",
     path: "",
     name: "",
+  },
+  {
+    id: 4,
+    src: "Icons/user-check-icon.svg",
+    path: "/login",
+    name: "Login or sign Up",
   },
 ];
 const bookIcons = [
@@ -35,12 +41,6 @@ const bookIcons = [
   {
     id: 2,
     src: "Icons/heart-thin-icon.svg",
-    path: "",
-    name: "",
-  },
-  {
-    id: 2,
-    src: "Icons/eye-look-icon.svg",
     path: "",
     name: "",
   },

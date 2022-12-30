@@ -22,3 +22,8 @@ button {
   background-color: transparent;
   border: none;
 }
+@media screen and (max-width: 992px) and (min-width: 400px) {
+  .All {
+    display: unset;
+  }
+}

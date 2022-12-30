@@ -11,7 +11,6 @@ const NavBarLinks = () => {
       const newW = window.innerWidth;
       setWindowW(newW);
     });
-    // console.log(windowW);
   }, [windowW, bool]);
 
   return (
@@ -65,7 +64,7 @@ const NavBarLinks = () => {
                       ) : (
                         <img src={e.src} className="svgIcon" alt="" />
                       )}
-                      {e.id !== 3 ? <i>(0)</i> : ""}
+                      {e.id !== 4 ? <i>(0)</i> : ""}
                     </a>
                   </>
                 );

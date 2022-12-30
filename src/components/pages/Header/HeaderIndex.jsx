@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "../Styles/header.css";
 import { AiOutlineSearch } from "react-icons/ai";
-import { useState } from "react";
 
 const HeaderIndex = () => {
-  const [click, setClicked] = useState(true);
+  const [focus, setFocus] = useState(false);
+  useEffect(() => {
+    console.log(focus);
+  }, [focus]);
+
   return (
     <>
       <div className="div headerContainer">
@@ -25,19 +28,20 @@ const HeaderIndex = () => {
             the perfect book or make recommendations based on your interests.
           </p>
         </div>
-        <div className="searchBarContainer" onClick={(e) => setClicked(!click)}>
+        <div className="searchBarContainer">
           <div>
             <input
               type="text"
               placeholder="Search any book ..."
               className="search-bar"
+              onClick={() => setFocus(true)}
             ></input>
             <button
               type="submit"
               className="search-button"
-              style={{ display: click ? "none" : "block" }}
+              style={{ display: focus ? "block" : "none" }}
             >
-              <i class="fas fa-search">
+              <i className="fas fa-search">
                 <AiOutlineSearch size={30} />
               </i>
             </button>
